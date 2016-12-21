@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int TinhTong(int n)
+{
+  int myInt = 0;
+  while(n > 0)
+  {
+    int temp = n % 10;
+    myInt = myInt + temp;
+    n = n / 10;
+  }
+  return myInt;
+}
+
+int main()
+{
+  int n;
+  cout << "N = "; cin >> n;
+  
+  int result = TinhTong(n);
+  cout << "Tong cac chu so cua mot so: " << result << endl;
+  return 0;
+}
